@@ -1,7 +1,12 @@
-const reducer = (state = 0, action) => {
+const initialState = {
+    books: [],
+};
+const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'INC': 
-            return state + 1;
+        case 'BOOKS_LOADED': 
+            return {
+                books: action.payload,
+            };
         default:
             return state; 
     }
