@@ -3,7 +3,7 @@ import './Spinner.css';
 
 const Spinner = () => {
     return (
-        <div class="lds-css ng-scope"><div class="lds-ellipsis"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div>
+        <div className ="lds-css ng-scope"><div className ="lds-ellipsis"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div>
     );
 }
 export default Spinner;
