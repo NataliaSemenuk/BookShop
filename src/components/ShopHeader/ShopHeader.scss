@@ -1,0 +1,20 @@
+.shopHeader {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Baskervville', serif;
+    font-size: 20px;
+
+    .shopHeader__logo {
+        flex-basis: 20%;
+        font-family: 'Dancing Script', cursive;
+        font-size: 40px;
+    }
+
+    .shopHeader__numberBuy {
+        flex-basis: 20%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

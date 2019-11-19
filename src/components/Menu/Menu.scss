@@ -14,10 +14,9 @@ a {
     .menu__item {
         padding: 0 30px;
         position: relative;
-    }
-
-    .menu__item:hover > .submenu {
-        display: block;
+        &:hover > .submenu {
+            display: block;
+        }
     }
 
     .submenu {
