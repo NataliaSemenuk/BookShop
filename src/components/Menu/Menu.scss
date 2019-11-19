@@ -1,0 +1,38 @@
+ul {
+    margin: 0;
+}
+a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    .menu__item {
+        padding: 0 30px;
+        position: relative;
+    }
+
+    .menu__item:hover > .submenu {
+        display: block;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        padding: 10px 0px;
+        width: 120px;
+        list-style-type: none;
+        .submenu__item {
+            display: block;
+            padding: 5px 0;
+        }
+        .submenu__item > a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
