@@ -1,14 +1,16 @@
-import React, {Component, Fragment} from 'react';
-import './App.css';
-import Spinner from '../Spinner/Spinner';
-import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
-import  withBookstoreService from '../hoc/withBookstoreService';
+import React from 'react';
+import {Switch, Route} from 'react-router-dom';
+import '../../css/App/App.css';
+import HomePage from '../pages/HomePage';
+import CartPage from '../pages/CartPage';
 
 const App = () => {
     return (
         <div>
-            <ErrorIndicator />
-            <Spinner />
+        <Switch>
+            <Route path = '/' component = {HomePage} exact />
+            <Route path = '/cart' component = {CartPage}/>
+        </Switch>
         </div>
     );
 }

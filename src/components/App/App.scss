@@ -1,0 +1,6 @@
+.mainbox {
+    background-color: yellow;
+    &:hover{
+        background-color: blueviolet;
+    }
+}

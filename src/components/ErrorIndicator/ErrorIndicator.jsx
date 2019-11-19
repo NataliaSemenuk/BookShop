@@ -1,5 +1,5 @@
 import React from 'react';
-import './ErrorIndicator.css';
+import '../../css/ErrorIndicator/ErrorIndicator.css';
 import image from '../../image/ee_Squirreled.svg';
 
 const ErrorIndicator = () => {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import BookListItem from '../BookListItem/BookListItem';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import BookListItem from '../BookListItem/BookListItem';
 import withBookstoreService from '../hoc/withBookstoreService';
 import { booksLoaded } from '../../actions/actions';
 
@@ -33,10 +34,23 @@ const mapStateToProps = ({books}) => {
     };
 };
 const mapDispatchToProps = (dispatch) => {
-    return {
-        booksLoaded: (newBooks) => {
-            dispatch(booksLoaded(newBooks));
-        }
-    }
+    // return {
+    //     booksLoaded: (newBooks) => {
+    //         dispatch(booksLoaded(newBooks));
+    //     }
+    // }
+    return bindActionCreators({
+        booksLoaded
+    }, dispatch);
 };
 export default withBookstoreService()(connect(mapStateToProps, mapDispatchToProps)(BookList));
+
+// const compose = (...func) => (comp) => {
+//     return func
+//     .reduceRight((wrapped, f) => f(wrapped), comp);
+// };
+// export default compose;
+// export default compose(
+//     withBookstoreService(),
+//     connect(mapStateToProps, mapDispatchToProps)
+// )(BookList)
